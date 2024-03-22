@@ -3,7 +3,7 @@ import luhnAlgorithm
 import Loghandler
 import os
 import datetime
-import DatabaseHandler
+# import DatabaseHandler
 
 
 
@@ -12,14 +12,14 @@ dirname, filename = os.path.split(os.path.abspath(__file__))
 
 # Constructor
 logHandler = Loghandler.LogHandler(dirname + "\\Logs\\logFile.txt")
-dbHandler = DatabaseHandler.DatabaseHandler("Driver={SQL Server Native Client 11.0};"
-                                            "Server=servername;"
-                                            "Database=databasename;"
-                                            "uid=SA;pwd=password")
-
+# dbHandler = DatabaseHandler.DatabaseHandler("Driver={SQL Server Native Client 11.0};"
+#                                            "Server=servername;"
+#                                            "Database=databasename;"
+#                                            "uid=SA;pwd=password")
+#
 # Read database data
 # Just for test of database connections
-dbHandler.readAllRowData("Tokens")
+# dbHandler.readAllRowData("Tokens")
 
 # Write logrow
 logHandler.writeToFile("Application Started - " + str(datetime.datetime.now()))
